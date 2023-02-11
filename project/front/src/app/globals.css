@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .link {
+      @apply text-primary-600 hover:text-secondary-500 hover:underline;
+    }
+  
+    .dark .link {
+      @apply text-primary-400 hover:text-secondary-500;
+    }
+  }
+  .dark {
+    color: white;
+    background-color: theme("colors.background.900");
+  }
+  .white {
+    color: black;
+    background-color: white;
+  }

@@ -8,7 +8,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body>
+        {children}
+        <div id="modal-root"></div>
+        </body>
     </html>
   )
 }

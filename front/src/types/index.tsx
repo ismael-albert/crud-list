@@ -1,7 +1,3 @@
-export interface IFormInput {
-    Title: string;
-    Content: string;
-  }
   export interface IButtonProps {
     children?: React.ReactNode;
     onClick?: () => void;

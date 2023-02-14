@@ -1,7 +1,7 @@
 
-import {IFormInput} from "@/types";
+import {IProduct} from "@/types";
 
-export async function PostProduct(data: IFormInput) {
+export async function PostProduct(data: IProduct) {
     fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/products`,
     {
         method: 'POST',
@@ -11,6 +11,7 @@ export async function PostProduct(data: IFormInput) {
         },
         body: JSON.stringify(data)
     })
-    .then((res) =>  true)
-    .catch((err) => err)
+    .then((res) => res.json())
+    .catch((err) => console.log(err))
+    return;
 }
